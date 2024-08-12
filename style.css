@@ -16,6 +16,16 @@ body {
   padding: 0 20px;
 }
 
+.g-4,
+.gy-4 {
+  --bs-gutter-y: 2rem;
+}
+
+.g-4,
+.gx-4 {
+  --bs-gutter-x: 2rem;
+}
+
 h1,
 h2,
 h3,
@@ -304,7 +314,7 @@ header ul li:hover .submenu {
 }
 
 .banner-content h1 {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
 .banner-content p {
@@ -336,34 +346,17 @@ header ul li:hover .submenu {
   background: #fff;
   padding: 20px;
   padding-top: 40px;
-}
-
-.overview-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 20px;
+  height: 200px;
 }
 
 .overview .over-card {
-  border-radius: 5px;
-  width: 100%;
-  display: flex;
-  gap: 30px;
-  padding: 10px;
-  transition: all 0.3s;
-}
-
-@media (max-width: 768px) {
-  .overview .over-card {
-    height: 100%;
-    justify-content: center;
-  }
+  text-align: center;
 }
 
 .overview .over-card i {
   color: #6ab04c;
   font-size: 30px;
-  transition: all 0.3s;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 768px) {
@@ -437,9 +430,9 @@ header ul li:hover .submenu {
   }
 }
 
-.abc,
+.honorable-minister,
 .news-wrap {
-  background-image: url("https://html.matethemes.com/crete/demo/assets/images/shapes/net-vector.png");
+  background-image: url("./images/net-vector.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -457,6 +450,7 @@ header ul li:hover .submenu {
   text-align: center;
   border-radius: 10px;
   transition: all 0.3s;
+  height: 100%;
 }
 
 .minister-card:hover {
@@ -538,10 +532,19 @@ header ul li:hover .submenu {
   font-weight: 500;
 }
 
+.new-box h6 i {
+  color: #6ab04c;
+}
+
 .news-slider a {
-  font-size: 16px;
+  font-size: 15px;
   color: #30336b;
   font-weight: 500;
+  margin-right: 10px;
+}
+
+.news-slider a:hover {
+  color: #6ab04c;
 }
 
 .new-box p {
@@ -630,6 +633,7 @@ header ul li:hover .submenu {
 
 .client-slider img {
   width: 200px;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -649,7 +653,7 @@ header ul li:hover .submenu {
       rgba(106, 176, 76, 1) 11.2%,
       rgba(48, 51, 107, 1) 91.1%);
   padding-bottom: 100px;
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 
 @media (max-width: 768px) {
@@ -700,7 +704,6 @@ footer {
   width: 100%;
   padding-top: 50px;
 }
-
 
 footer .contact input,
 footer .contact textarea {
@@ -824,6 +827,7 @@ footer .services h4,
 
 footer .services {
   color: #fff;
+  padding-left: 30px;
 }
 
 footer .services ul li {
@@ -845,5 +849,26 @@ footer .services ul li a {
 }
 
 footer .services ul li a:hover {
+  color: #6ab04c;
+}
+
+/* Preloader Styles */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+
+#preloader .spinner-border {
   color: #6ab04c;
 }

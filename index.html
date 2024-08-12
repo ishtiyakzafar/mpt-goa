@@ -15,11 +15,18 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/countUp.js"></script>
 </head>
 
-<body>
+<body onload="hidePreloader()">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
   <div class="menu-bar">
     <img src="https://cdn-icons-png.flaticon.com/128/1828/1828859.png" alt="menu" />
   </div>
@@ -37,11 +44,9 @@
       <li>
         <a href="#">Feedback</a>
       </li>
+      <li><a href="#">English</a> | <a href="#"> Hindi</a></li>
       <li>
-        <a href="#">English</a> | <a href="#"> Hindi</a>
-      </li>
-      <li>
-        <input type="text"> <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" /> <i class="fa-solid fa-magnifying-glass"></i>
       </li>
     </ul>
   </div>
@@ -77,9 +82,8 @@
   </header>
 
   <div class="banner-hero">
-    <video autoPlay="autoplay" loop muted>
-      <source type="video/mp4" src="video/banner.mp4">
-      </source>
+    <video autoplay="autoplay" loop muted>
+      <source type="video/mp4" src="video/banner.mp4" />
     </video>
     <div class="banner-content">
       <h1 data-aos="fade-up">WELCOME TO MORMUGAO PORT TRUST</h1>
@@ -89,9 +93,9 @@
 
   <!-- OVERVIEW SECTION START -->
   <div class="overview">
-    <div class="overview-box">
+    <div class="overview-slider">
       <div class="over-card">
-        <i class="fa-solid fa-ship"></i>
+        <i class="fa-solid fa-calendar-days"></i>
         <div class="content text-white">
           <h4><span id="daycounter">0.82</span> days</h4>
           <p>Average Pre-berthing detention</p>
@@ -99,7 +103,7 @@
       </div>
 
       <div class="over-card">
-        <i class="fa-solid fa-ship"></i>
+        <i class="fa-solid fa-clock"></i>
         <div class="content text-white">
           <h4><span id="hrcounter">40.44</span> Hrs</h4>
           <p>Average. TRT</p>
@@ -107,7 +111,7 @@
       </div>
 
       <div class="over-card">
-        <i class="fa-solid fa-ship"></i>
+        <i class="fa-solid fa-weight-scale"></i>
         <div class="content text-white">
           <h4><span id="toncounter">19,218</span> Tonnes</h4>
           <p>Average. Output per berth day</p>
@@ -115,7 +119,7 @@
       </div>
 
       <div class="over-card">
-        <i class="fa-solid fa-ship"></i>
+        <i class="fa-solid fa-percent"></i>
         <div class="content text-white">
           <h4><span id="percounter">34.29</span>%</h4>
           <p>Operating Ratio</p>
@@ -123,7 +127,7 @@
       </div>
 
       <div class="over-card">
-        <i class="fa-solid fa-ship"></i>
+        <i class="fa-solid fa-solar-panel"></i>
         <div class="content text-white">
           <h4><span id="milcounter">48.28</span> Million Units</h4>
           <p>Solar Power generated upto July 2024</p>
@@ -133,12 +137,12 @@
   </div>
   <!-- OVERVIEW SECTION END -->
 
-  <div class="abc">
+  <div class="honorable-minister">
     <div class="container">
       <div class="section-heading">
         <h1 data-aos="fade-up">Our Honorable <span>Minister</span></h1>
       </div>
-      <div class="row g-5">
+      <div class="row g-4">
         <div data-aos="fade-up" class="col-md-6">
           <div class="minister-card">
             <img class="img-fluid" src="./images/minister-image1.jpg" alt="img" />
@@ -167,54 +171,6 @@
         </div>
       </div>
     </div>
-    <div class="section-heading">
-      <h1 data-aos="fade-up">Latest News <span>Updates</span></h1>
-    </div>
-    <div class="container">
-      <div class="our-news">
-        <div class="row g-5">
-          <div class="col-md-4">
-            <div data-aos="fade-up" class="new-box">
-              <h6>What's New</h6>
-              <div class="news-slider">
-                <a href="#">Development of International & Domestic Cruise
-                  Terminal,Ferry, Ropax & Allied Activities at Mormugao Port,
-                  Goa</a>
-                <a href="#">Replacement of LED Signboard at NMPT Signal Junction,
-                  Panambur</a>
-              </div>
-              <p>View all <i class="fa-solid fa-arrow-right"></i></p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div data-aos="fade-up" class="new-box">
-              <h6>Announcement</h6>
-              <div class="news-slider">
-                <a href="#">Development of International & Domestic Cruise
-                  Terminal,Ferry, Ropax & Allied Activities at Mormugao Port,
-                  Goa</a>
-                <a href="#">Replacement of LED Signboard at NMPT Signal Junction,
-                  Panambur</a>
-              </div>
-              <p>View all <i class="fa-solid fa-arrow-right"></i></p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div data-aos="fade-up" class="new-box">
-              <h6>Tender</h6>
-              <div class="news-slider">
-                <a href="#">Development of International & Domestic Cruise
-                  Terminal,Ferry, Ropax & Allied Activities at Mormugao Port,
-                  Goa</a>
-                <a href="#">Replacement of LED Signboard at NMPT Signal Junction,
-                  Panambur</a>
-              </div>
-              <p>View all <i class="fa-solid fa-arrow-right"></i></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="galery">
@@ -222,13 +178,12 @@
       <h1 data-aos="fade-up">Photo <span>Gallery</span></h1>
     </div>
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-4">
         <div class="col-md-4">
           <div data-aos="fade-up" class="galery-card">
             <div class="imgBox">
               <div class="img-overlay"></div>
-              <img class="img-fluid" src="https://html.matethemes.com/crete/demo/assets/images/blog/blog-3.jpg"
-                alt="img" />
+              <img class="img-fluid" src="./images/blog-3.jpg" alt="img" />
             </div>
             <div class="content">
               <a href="#">The Highly Creative UI/UX Design from a Silicon Valley.</a>
@@ -243,8 +198,7 @@
           <div data-aos="fade-up" class="galery-card">
             <div class="imgBox">
               <div class="img-overlay"></div>
-              <img class="img-fluid" src="https://html.matethemes.com/crete/demo/assets/images/blog/blog-4.jpg"
-                alt="img" />
+              <img class="img-fluid" src="./images/blog-4.jpg" alt="img" />
             </div>
             <div class="content">
               <a href="#">The Highly Creative UI/UX Design from a Silicon Valley.</a>
@@ -259,8 +213,7 @@
           <div data-aos="fade-up" class="galery-card">
             <div class="imgBox">
               <div class="img-overlay"></div>
-              <img class="img-fluid" src="https://html.matethemes.com/crete/demo/assets/images/blog/blog-5.jpg"
-                alt="img" />
+              <img class="img-fluid" src="./images/blog-5.jpg" alt="img" />
             </div>
             <div class="content">
               <a href="#">The Highly Creative UI/UX Design from a Silicon Valley.</a>
@@ -275,8 +228,7 @@
           <div data-aos="fade-up" class="galery-card">
             <div class="imgBox">
               <div class="img-overlay"></div>
-              <img class="img-fluid" src="https://html.matethemes.com/crete/demo/assets/images/blog/blog-3.jpg"
-                alt="img" />
+              <img class="img-fluid" src="./images/blog-3.jpg" alt="img" />
             </div>
             <div class="content">
               <a href="#">The Highly Creative UI/UX Design from a Silicon Valley.</a>
@@ -291,8 +243,7 @@
           <div data-aos="fade-up" class="galery-card">
             <div class="imgBox">
               <div class="img-overlay"></div>
-              <img class="img-fluid" src="https://html.matethemes.com/crete/demo/assets/images/blog/blog-4.jpg"
-                alt="img" />
+              <img class="img-fluid" src="./images/blog-4.jpg" alt="img" />
             </div>
             <div class="content">
               <a href="#">The Highly Creative UI/UX Design from a Silicon Valley.</a>
@@ -307,8 +258,7 @@
           <div data-aos="fade-up" class="galery-card">
             <div class="imgBox">
               <div class="img-overlay"></div>
-              <img class="img-fluid" src="https://html.matethemes.com/crete/demo/assets/images/blog/blog-5.jpg"
-                alt="img" />
+              <img class="img-fluid" src="./images/blog-5.jpg" alt="img" />
             </div>
             <div class="content">
               <a href="#">The Highly Creative UI/UX Design from a Silicon Valley.</a>
@@ -317,6 +267,55 @@
                 meeting). List of non working vessels.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="news-wrap">
+    <div class="container">
+      <div class="section-heading">
+        <h1 data-aos="fade-up">Latest News <span>Updates</span></h1>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div data-aos="fade-up" class="new-box">
+            <h6><i class="fa-regular fa-file-lines"></i> What's New</h6>
+            <div class="news-slider">
+              <a href="#">Development of International & Domestic Cruise
+                Terminal,Ferry, Ropax & Allied Activities at Mormugao
+                Port, Goa</a>
+              <a href="#">Replacement of LED Signboard at NMPT Signal Junction,
+                Panambur</a>
+            </div>
+            <p>View all <i class="fa-solid fa-arrow-right"></i></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div data-aos="fade-up" class="new-box">
+            <h6><i class="fa-solid fa-bullhorn"></i> Announcement</h6>
+            <div class="news-slider">
+              <a href="#">Development of International & Domestic Cruise
+                Terminal,Ferry, Ropax & Allied Activities at Mormugao
+                Port, Goa</a>
+              <a href="#">Replacement of LED Signboard at NMPT Signal Junction,
+                Panambur</a>
+            </div>
+            <p>View all <i class="fa-solid fa-arrow-right"></i></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div data-aos="fade-up" class="new-box">
+            <h6><i class="fa-regular fa-newspaper"></i> Tender</h6>
+            <div class="news-slider">
+              <a href="#">Development of International & Domestic Cruise
+                Terminal,Ferry, Ropax & Allied Activities at Mormugao
+                Port, Goa</a>
+              <a href="#">Replacement of LED Signboard at NMPT Signal Junction,
+                Panambur</a>
+            </div>
+            <p>View all <i class="fa-solid fa-arrow-right"></i></p>
           </div>
         </div>
       </div>
@@ -331,67 +330,67 @@
       <div class="row g-4">
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card one">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-solid fa-chart-line"></i>
             <p>Project Status</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-solid fa-globe"></i>
             <p>Trade News/ Notice</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-regular fa-user"></i>
             <p>Customer Login</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-regular fa-credit-card"></i>
             <p>Payment, GST & TDS</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-solid fa-user"></i>
             <p>PPP Operators</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-solid fa-shield-halved"></i>
             <p>Vigilance</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-solid fa-file-invoice-dollar"></i>
             <p>Paid/Pending Bills</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-solid fa-user-nurse"></i>
             <p>Medical Services</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-solid fa-user-tie"></i>
             <p>Employees Corner</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-solid fa-hand-holding-dollar"></i>
             <p>Pensioners Corner</p>
           </div>
         </div>
         <div data-aos="fade-up" class="col-md-3">
           <div class="service-card">
-            <i class="fa-solid fa-ship"></i>
+            <i class="fa-solid fa-person-shelter"></i>
             <p>LNG Terminal</p>
           </div>
         </div>
@@ -455,7 +454,7 @@
             </div>
           </div>
         </div>
-        <div data-aos="fade-up" data-aos-offset="50" class="col-md-3">
+        <div data-aos="fade-up" data-aos-offset="50" class="col-md-2">
           <div class="services">
             <h4>Services</h4>
             <ul>
@@ -466,8 +465,6 @@
               <li><a href="#">Privacy Policy</a></li>
               <li><a href="#">Disclaimer</a></li>
               <li><a href="#">Copyright Policy</a></li>
-              <!-- <li><a href="#">GST Corner</a></li> -->
-              <!-- <li><a href="#">Help</a></li> -->
             </ul>
           </div>
         </div>
@@ -509,32 +506,36 @@
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script type="text/javascript">
-    // Initialize CountUp.js
-    let daycounter = new CountUp('daycounter', 0, 82)
-    let hrcounter = new CountUp('hrcounter', 0, 44)
-    let toncounter = new CountUp('toncounter', 0, 19218)
-    let percounter = new CountUp('percounter', 0, 34)
-    let milcounter = new CountUp('milcounter', 0, 48)
+    // JavaScript to hide the preloader
+    function hidePreloader() {
+      setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+        preloader.style.opacity = 0;
+        preloader.style.visibility = "hidden";
+      }, 500);
+    }
 
-    window.addEventListener('scroll', function () {
-      var scrollPosition = window.pageYOffset;
-      if (scrollPosition > 350) {
-        daycounter.start()
-        hrcounter.start()
-        toncounter.start()
-        percounter.start()
-        milcounter.start()
-      }
-    });
+    // Initialize CountUp.js
+    // let daycounter = new CountUp('daycounter', 0, 82)
+    // let hrcounter = new CountUp('hrcounter', 0, 44)
+    // let toncounter = new CountUp('toncounter', 0, 19218)
+    // let percounter = new CountUp('percounter', 0, 34)
+    // let milcounter = new CountUp('milcounter', 0, 48)
+
+    // daycounter.start()
+    // hrcounter.start()
+    // toncounter.start()
+    // percounter.start()
+    // milcounter.start()
 
     AOS.init({
-      offset: 200,       // Offset (in pixels) from the original trigger point
-      delay: 0,          // Values from 0 to 3000, with step 50ms
-      duration: 1000,    // Values from 0 to 3000, with step 50ms
-      easing: 'ease',    // Default easing for AOS animations
-      once: true,        // Whether animation should happen only once - while scrolling down
-      mirror: false,     // Whether elements should animate out while scrolling past them
-      anchorPlacement: 'top-bottom', // Defines which position of the element regarding to window should trigger the animation
+      offset: 200, // Offset (in pixels) from the original trigger point
+      delay: 0, // Values from 0 to 3000, with step 50ms
+      duration: 1000, // Values from 0 to 3000, with step 50ms
+      easing: "ease", // Default easing for AOS animations
+      once: true, // Whether animation should happen only once - while scrolling down
+      mirror: false, // Whether elements should animate out while scrolling past them
+      anchorPlacement: "top-bottom", // Defines which position of the element regarding to window should trigger the animation
     });
 
     $(document).ready(function () {
@@ -546,6 +547,38 @@
         autoplay: true,
         autoplaySpeed: 2000,
         pauseOnHover: false,
+      });
+    });
+
+    $(document).ready(function () {
+      $(".overview-slider").slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
       });
     });
 
@@ -582,8 +615,6 @@
         document.querySelector(".header-overlay").classList.toggle("show");
       });
   </script>
-
-
 </body>
 
 </html>
