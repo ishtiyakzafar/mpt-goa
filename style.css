@@ -10,6 +10,163 @@ body {
   font-family: "Jost", sans-serif;
 }
 
+.chat-bot {
+  width: 350px;
+  height: 500px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+  background: #f1f1f1;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.chat-bot.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.chat_head {
+  background: #fff;
+  color: #212121;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.chat_head .close {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.chat_head .close img {
+  width: 35px;
+}
+
+.chat_head .imgbox {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #6ab04c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.chat_head .imgbox img {
+  width: 30px;
+  filter: invert(1);
+}
+
+.chat_body {
+  padding: 20px;
+}
+
+.chat_message {
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 70%;
+  font-size: 14px;
+  position: relative;
+}
+
+.chat_message.bot {
+  background: #fff;
+  color: #212121;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.chat_message.bot span {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  color: #000;
+  font-weight: 500;
+}
+
+.chat_message.user {
+  margin-top: 40px;
+  background: #6ab04c;
+  color: #fff;
+}
+
+.chat_message.user span {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  color: #000;
+  font-weight: 500;
+}
+
+.chat_input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+
+.chat_input input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat_input button {
+  background: #6ab04c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.chat-bot-icon {
+  background: #6ab04c;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 80;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.chat-bot-icon:hover {
+  transform: scale(1.1);
+}
+
+.chat-bot-icon img {
+  filter: invert(1);
+  width: 40px;
+}
+
+.scrollHidden {
+  overflow: hidden;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1300px;
@@ -46,19 +203,6 @@ ol {
 
 .menu-bar img {
   display: none;
-}
-
-@media (max-width: 768px) {
-  .menu-bar img {
-    display: block;
-    position: absolute;
-    z-index: 200;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    width: 25px;
-    filter: invert(1);
-  }
 }
 
 .top-header {
@@ -106,16 +250,6 @@ ol {
 .top-header ul li i {
   font-size: 14px;
   padding-left: 10px;
-}
-
-@media (max-width: 768px) {
-  .top-header {
-    flex-direction: column;
-    height: 80px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-  }
 }
 
 .top-header .lng {
@@ -372,21 +506,9 @@ header ul li:hover .submenu {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .overview .over-card h4 {
-    font-size: 18px;
-  }
-}
-
 .overview .over-card p {
   font-size: 14px;
   color: #777;
-}
-
-@media (max-width: 768px) {
-  .overview .over-card p {
-    font-size: 12px;
-  }
 }
 
 /* OVERVIEW SECTION END */
@@ -415,8 +537,6 @@ header ul li:hover .submenu {
 
 .section-heading h1 span {
   color: #6ab04c;
-  /* background: #6ab04c20; */
-  padding: 0 8px;
 }
 
 .section-heading.new h1 span {
@@ -511,13 +631,6 @@ header ul li:hover .submenu {
   margin-top: 100px;
 }
 
-@media (max-width: 768px) {
-  .news-wrap {
-    padding: 50px 0;
-    margin-top: 50px;
-  }
-}
-
 .new-box {
   border-radius: 10px;
   background: #fff;
@@ -591,13 +704,6 @@ header ul li:hover .submenu {
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-  .galery-card {
-    height: 350px !important;
-    margin: 0;
-  }
-}
-
 .galery-card .content {
   width: 100%;
   padding-top: 20px;
@@ -628,7 +734,7 @@ header ul li:hover .submenu {
 }
 
 .client-slider {
-  padding: 80px 20px;
+  margin: 80px 20px;
 }
 
 .client-slider img {
@@ -636,40 +742,101 @@ header ul li:hover .submenu {
   margin: auto;
 }
 
-@media (max-width: 768px) {
-  .client-slider {
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 0;
-  }
-
-  .client-slider img {
-    width: 200px;
-  }
-}
-
 .services-section {
-  background-image: linear-gradient(109.6deg,
-      rgba(106, 176, 76, 1) 11.2%,
-      rgba(48, 51, 107, 1) 91.1%);
+  background: #f1f1f193;
   padding-bottom: 100px;
-  /* margin-top: 80px; */
 }
 
 @media (max-width: 768px) {
   .services-section {
     padding: 50px 0;
-    margin-top: 50px;
   }
 }
 
 .service-card {
-  background: #fff;
   padding: 20px;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 20px;
   transition: all 0.3s;
   cursor: pointer;
+}
+
+.service-card.one {
+  background: #136a8a;
+  background: -webkit-linear-gradient(to right, #267871, #136a8a);
+  background: linear-gradient(to right, #267871, #136a8a);
+}
+
+.service-card.two {
+  background: #4568dc;
+  background: -webkit-linear-gradient(to right, #b06ab3, #4568dc);
+  background: linear-gradient(to right, #b06ab3, #4568dc);
+}
+
+.service-card.three {
+  background: #00b09b;
+  background: -webkit-linear-gradient(to right, #96c93d, #00b09b);
+  background: linear-gradient(to right, #96c93d, #00b09b);
+}
+
+.service-card.four {
+  background: #00f260;
+  background: -webkit-linear-gradient(to right, #0575e6, #00f260);
+  background: linear-gradient(to right, #0575e6, #00f260);
+}
+
+.service-card.five {
+  background: #c0392b;
+  background: -webkit-linear-gradient(to right, #8e44ad, #c0392b);
+  background: linear-gradient(to right, #8e44ad, #c0392b);
+}
+
+.service-card.six {
+  background: #fc4a1a;
+  background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+  background: linear-gradient(to right, #f7b733, #fc4a1a);
+}
+
+.service-card.seven {
+  background: #74ebd5;
+  background: -webkit-linear-gradient(to right, #acb6e5, #74ebd5);
+  background: linear-gradient(to right, #acb6e5, #74ebd5);
+}
+
+.service-card.eight {
+  background: #667db6;
+  background: -webkit-linear-gradient(
+    to right,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  );
+  background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+}
+
+.service-card.nine {
+  background: #6190e8;
+  background: -webkit-linear-gradient(to right, #a7bfe8, #6190e8);
+  background: linear-gradient(to right, #a7bfe8, #6190e8);
+}
+
+.service-card.ten {
+  background: #000046;
+  background: -webkit-linear-gradient(to right, #1cb5e0, #000046);
+  background: linear-gradient(to right, #1cb5e0, #000046);
+}
+
+.service-card.eleven {
+  background: #0cebeb;
+  background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
+  background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
+}
+
+.service-card.twevel {
+  background: #eecda3;
+  background: -webkit-linear-gradient(to right, #ef629f, #eecda3);
+  background: linear-gradient(to right, #ef629f, #eecda3);
 }
 
 .service-card:hover {
@@ -680,10 +847,11 @@ header ul li:hover .submenu {
   width: fit-content;
   margin: auto;
   transition: all 0.3s;
+  color: #fff;
+  font-size: 20px;
 }
 
 .service-card p:hover {
-  color: #6ab04c;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -691,12 +859,8 @@ header ul li:hover .submenu {
 .service-card i {
   font-size: 30px;
   padding-bottom: 20px;
-  color: #ddd;
+  color: #fff;
   transition: all 0.3s;
-}
-
-.service-card:hover i {
-  color: #6ab04c;
 }
 
 footer {
@@ -802,6 +966,8 @@ footer .address {
 
 footer .address img {
   margin-bottom: 30px;
+  border-radius: 2px;
+  width: 100px;
 }
 
 footer .address small {
@@ -871,4 +1037,173 @@ footer .services ul li a:hover {
 
 #preloader .spinner-border {
   color: #6ab04c;
+}
+
+/* ======media query====== */
+
+@media (max-width: 1200px) {
+  .banner-hero video {
+    height: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  footer .services {
+    padding-left: 0;
+  }
+
+  .section-heading h1 {
+    font-size: 35px;
+    padding: 60px 0;
+  }
+
+  .minister-card {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .minister-card img {
+    min-width: 120px;
+    height: 120px;
+  }
+
+  .minister-card h5 {
+    font-size: 16px;
+  }
+
+  .minister-card p {
+    font-size: 14px;
+  }
+
+  .galery-card .content a {
+    font-size: 16px;
+  }
+
+  .galery-card .content p {
+    font-size: 14px;
+  }
+
+  header ul {
+    gap: 20px;
+  }
+
+  header ul li a {
+    font-size: 12px;
+  }
+
+  .service-card {
+    margin: 10px 15px;
+  }
+
+  .top-header ul {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  header ul {
+    gap: 0;
+  }
+
+  .banner-hero video {
+    height: 400px;
+  }
+
+  .section-heading h1 {
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  .overview {
+    padding: 0;
+    height: 100%;
+    padding: 20px 0;
+  }
+
+  .overview .over-card h4 {
+    font-size: 18px;
+  }
+
+  .overview .over-card p {
+    font-size: 12px;
+  }
+
+  .section-heading h1::after {
+    height: 2px;
+    margin: 5px auto;
+  }
+
+  .galery-card {
+    height: 100%;
+    margin: 0;
+  }
+
+  .banner-content {
+    width: 95%;
+  }
+
+  .banner-content h1 {
+    font-size: 20px;
+  }
+
+  .new-box p {
+    margin-top: 20px;
+  }
+
+  .honorable-minister,
+  .news-wrap {
+    padding-bottom: 50px;
+  }
+
+  .client-slider {
+    margin: 40px 0;
+  }
+
+  .top-header {
+    flex-direction: column;
+    height: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .menu-bar img {
+    display: block;
+    position: absolute;
+    z-index: 200;
+    right: 10px;
+    top: 7px;
+    cursor: pointer;
+    width: 25px;
+    filter: invert(1);
+  }
+
+  .chat-bot-icon {
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .chat-bot-icon img {
+    width: 30px;
+  }
+
+  .chat-bot {
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    margin: 10px 5px;
+  }
 }
