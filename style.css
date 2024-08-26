@@ -28,7 +28,7 @@ video {
   /* This helps prevent extra space in inline elements */
 }
 
-.video-gallery video {
+.video-gallery {
   border-radius: 8px;
   height: 300px;
   /* border: 1px solid red; */
