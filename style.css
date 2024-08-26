@@ -1337,6 +1337,10 @@ footer .services ul li a:hover {
     height: 200px;
   }
 
+  .galery .section-heading h1 {
+    padding: 40px 0 40px 0;
+  }
+
   .galery-card img {
     height: 100%;
   }
