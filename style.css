@@ -25,14 +25,14 @@ video {
   margin: 0;
   padding: 0;
   display: block;
-  /* This helps prevent extra space in inline elements */
 }
 
 .video_boxs {
   border-radius: 8px;
-  height: 300px;
+  height: 400px;
   border-radius: 8px;
   overflow: hidden;
+  background: #000;
 }
 
 .port-map {
@@ -80,7 +80,6 @@ video {
   display: flex;
   align-items: center;
   gap: 20px;
-  /* border: 1px solid red; */
   background: #6ab04c10;
   padding-right: 60px;
   padding-left: 20px;
@@ -127,8 +126,6 @@ video {
 }
 
 .sticky-social-link:hover {
-  /* opacity: 0.8; */
-  /* transform: translateX(-10px); */
   padding-left: 10px;
 }
 
@@ -162,13 +159,17 @@ video {
   border-radius: 0 0 10px 10px;
   background: #fff;
   padding: 10px;
+  display: none;
 }
 
 .menu_icon img {
   width: 25px;
   filter: invert(1);
   cursor: pointer;
+  display: none;
 }
+
+
 
 .close_menu {
   height: 60px;
@@ -376,10 +377,6 @@ ol {
 }
 
 .menu-bar img {
-  /* display: none; */
-}
-
-.menu-bar img {
   display: block;
   position: absolute;
   z-index: 200;
@@ -398,19 +395,105 @@ ol {
   background: #130f40;
   color: white;
   padding: 10px 0;
-  display: flex;
-  /* justify-content: space-around; */
-  /* padding: 0 200px; */
-  height: 60px;
-  line-height: 40px;
+  /* display: flex; */
+  /* height: 60px; */
+  /* line-height: 40px; */
   z-index: 90;
+}
+
+.logo1{
+  width: 500px;
+  /* height: 100px; */
+  /* margin-left: 20px; */
+}
+.logo2{
+  width: 130px;
+  /* height: 100px; */
+  /* margin-left: 20px; */
+}
+
+@media(max-width:1200px){
+  .logo1,.logo2,.desk_menu{
+    display: none !important;
+  }
+  .menu_icon img{
+    display: block !important;
+  }
+
+  .header_logo{
+    display: block !important;
+  }
+}
+
+.sdfsdfsdf{
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* padding: 0 20px; */
+  position: relative;
+}
+
+.desk_submenu{
+  /* display: none !important; */
+  position: absolute;
+  display: none !important;
+  flex-direction: column;
+  justify-content: start;
+  /* align-items: baseline; */
+  /* border: 1px solid red; */
+  width: 200px;
+  /* padding: 10px; */
+  background: #6ab04c;
+  gap: 0px !important;
+}
+
+.sdfsdfsdf:hover .desk_submenu{
+  display: flex !important;
+}
+
+.sdfsdfsdf a img{
+  filter: invert(1);
+  /* width: 15px; */
+  margin-top: -5px;
+}
+
+.desk_submenu li{
+  /* display: flex; */
+  /* justify-content: start; */
+}
+
+.desk_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.containerccc{
+  /* margin-bottom: 10px !important; */
+}
+
+.desk_submenu li{
+  display: block !important;
+  /* line-height: 20px !important; */
+}
+.desk_submenu li a{
+  padding: 7px 10px;
+  display: block !important;
+  border-bottom: 1px solid #f1f1f15c;
+}
+
+.desk_submenu li a:hover{
+  color: #000046 !important;
+  /* opacity: 0.8; */
 }
 
 .top-header ul {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  /* align-items: center; */
   justify-content: start;
-  gap: 25px;
+  gap: 20px;
 }
 
 .top-header ul li {
@@ -447,15 +530,23 @@ ol {
   font-size: 12px;
 }
 
-.top-header span:hover {
-  /* color: #30336b; */
-  /* cursor: pointer; */
-}
-
 .top-header p {
   font-size: 13px;
   color: white;
 }
+
+@media(max-width:1200px){
+  .top-header {
+    height: 60px;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+  .containerccc{
+    margin-bottom: 0;
+  }
+}
+
+
 
 @media (max-width: 768px) {
   .top-header p {
@@ -518,7 +609,6 @@ header ul {
   gap: 30px;
   justify-content: center;
   line-height: 60px;
-  /* background: red; */
 }
 
 header ul {
@@ -552,33 +642,15 @@ header ul li a {
 header ul li a {
   padding-left: 20px;
   display: block;
-  /* font-size: 12px; */
 }
 
 header ul li a:hover {
   color: #6ab04c;
 }
 
-.submenu {
-  /* visibility: hidden; */
-  /* opacity: 0; */
-  /* background: #130f40ea; */
-  /* border-top: 1px solid #fff; */
-  /* position: absolute; */
-  /* z-index: 100; */
-  /* top: 60px; */
-  /* left: 0; */
-  /* border-bottom-left-radius: 3px; */
-  /* border-bottom-right-radius: 3px; */
-  /* width: 200px; */
-  /* overflow: hidden; */
-  /* transition: all 0.3s; */
-}
-
 .submenu li {
   border: none;
   line-height: 30px;
-  /* padding-left: 0; */
 }
 
 .accordion-button {
@@ -625,6 +697,8 @@ header ul li:hover .submenu {
 .submenu ul li a:hover {
   color: white;
 }
+
+
 
 .banner-hero {
   position: relative;
@@ -717,7 +791,7 @@ header ul li:hover .submenu {
   color: #212121;
   font-size: 40px;
   text-align: center;
-  padding: 80px 0;
+  padding: 60px 0;
   font-weight: 600;
 }
 
@@ -826,10 +900,6 @@ header ul li:hover .submenu {
 
 /* OUR MINISTER SECTION END */
 
-.news-wrap {
-  /* margin-top: 100px; */
-}
-
 .new-box {
   border-radius: 10px;
   background: #fff;
@@ -892,7 +962,7 @@ header ul li:hover .submenu {
 }
 
 .galery-card img {
-  height: 300px;
+  height: 400px;
   width: 100%;
   object-fit: cover;
   border-radius: 8px;
@@ -953,7 +1023,7 @@ header ul li:hover .submenu {
 
 @media (max-width: 768px) {
   .services-section {
-    padding: 50px 0;
+    padding: 0 0 50px 0;
   }
 }
 
@@ -1002,9 +1072,9 @@ header ul li:hover .submenu {
 }
 
 .service-card.seven {
-  background: #74ebd5;
-  background: -webkit-linear-gradient(to right, #acb6e5, #74ebd5);
-  background: linear-gradient(to right, #acb6e5, #74ebd5);
+  background: #8e2de2;
+  background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
 }
 
 .service-card.eight {
@@ -1018,9 +1088,9 @@ header ul li:hover .submenu {
 }
 
 .service-card.nine {
-  background: #6190e8;
-  background: -webkit-linear-gradient(to right, #a7bfe8, #6190e8);
-  background: linear-gradient(to right, #a7bfe8, #6190e8);
+  background: #c31432;
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  background: linear-gradient(to right, #240b36, #c31432);
 }
 
 .service-card.ten {
@@ -1030,15 +1100,15 @@ header ul li:hover .submenu {
 }
 
 .service-card.eleven {
-  background: #0cebeb;
-  background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
-  background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);
+  background: #ff416c;
+  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
 }
 
 .service-card.twevel {
-  background: #eecda3;
-  background: -webkit-linear-gradient(to right, #ef629f, #eecda3);
-  background: linear-gradient(to right, #ef629f, #eecda3);
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
 }
 
 .service-card:hover {
@@ -1242,7 +1312,8 @@ footer .services ul li a:hover {
 }
 
 .galery {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/gallerybg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/gallerybg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1251,7 +1322,7 @@ footer .services ul li a:hover {
 }
 
 .galery .section-heading h1 {
-  padding: 80px 0 40px 0;
+  padding: 60px 0 60px 0;
   color: #fff;
 }
 
@@ -1275,6 +1346,14 @@ footer .services ul li a:hover {
 }
 
 @media (max-width: 992px) {
+  .video_boxs {
+    height: 300px;
+  }
+
+  .galery-card img {
+    height: 300px;
+  }
+
   header {
     width: 280px;
     left: -280px;
@@ -1333,7 +1412,7 @@ footer .services ul li a:hover {
 }
 
 @media (max-width: 768px) {
-  .video-gallery video {
+  .video_boxs {
     height: 200px;
   }
 
@@ -1382,7 +1461,7 @@ footer .services ul li a:hover {
 
   .section-heading h1 {
     font-size: 20px;
-    padding: 20px 0;
+    padding: 30px 0;
   }
 
   .overview {
@@ -1428,15 +1507,6 @@ footer .services ul li a:hover {
 
   .client-slider {
     margin: 40px 0;
-  }
-
-  .top-header {
-    /* flex-direction: column; */
-    /* height: 100%; */
-    /* padding-top: 0; */
-    /* padding-bottom: 0; */
-    /* text-align: center; */
-    /* gap: 10px; */
   }
 
   .chat-bot-icon {
